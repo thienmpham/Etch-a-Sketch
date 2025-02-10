@@ -16,14 +16,20 @@ body {
 .container {
     display: flex;
     width: 50%;
+
     flex-wrap: wrap;
+
 
 }
 
+#generate {
+    height: 2%;
+}
+
 .square {
-    width: 6.25%;
+
     background-color: red;
-    padding-bottom: 6.25%;
+
 }
 
 

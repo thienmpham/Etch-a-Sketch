@@ -42,9 +42,9 @@ function appendSquare(response) {
     let area = response * response;
 
     // side length of squareis equal to input divided by 100 
-    let length = response / 100;
+    let length = 100 / response;
 
-    //for loop for 16x16 square 
+
     for (let i = 1; i <= area; i++) {
         // create div 
         let div = document.createElement('div');
@@ -54,5 +54,14 @@ function appendSquare(response) {
         container.appendChild(div);
 
 
+
     }
+    let squares = document.querySelectorAll('.square');
+
+    squares.forEach((square) => {
+        square.style.width = `${length}px`;
+        square.style.paddingBottom = `${length}px`;
+    })
+
+
 }
