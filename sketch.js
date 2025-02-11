@@ -4,6 +4,7 @@ function onButtonPress() {
     // on Generate button press call function promptAmount()
     let button = document.querySelector('#generate');
     button.addEventListener('click', function () {
+        removeGrid();
         promptAmount();
 
     })
@@ -12,7 +13,15 @@ function onButtonPress() {
 onButtonPress();
 
 function removeGrid() {
-
+    if (document.querySelector('.square') !== null) {
+        let squares = document.querySelectorAll('.square');
+        squares.forEach((square) => {
+            square.remove();
+        })
+    }
+    else {
+        return;
+    }
 }
 
 function promptAmount() {
@@ -59,8 +68,8 @@ function appendSquare(response) {
     let squares = document.querySelectorAll('.square');
 
     squares.forEach((square) => {
-        square.style.width = `${length}px`;
-        square.style.paddingBottom = `${length}px`;
+        square.style.width = `${length}%`;
+        square.style.paddingBottom = `${length}%`;
     })
 
 
