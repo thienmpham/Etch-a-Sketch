@@ -26,6 +26,10 @@ body {
     height: 2%;
 }
 
+#clear {
+    height: 2%;
+}
+
 .square {
 
     background-color: red;
@@ -33,6 +37,6 @@ body {
 }
 
 
-.square:hover {
+.color-change {
     background-color: blue;
 }

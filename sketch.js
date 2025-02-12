@@ -2,15 +2,43 @@
 
 function onButtonPress() {
     // on Generate button press call function promptAmount()
-    let button = document.querySelector('#generate');
-    button.addEventListener('click', function () {
+    let generate = document.querySelector('#generate');
+    generate.addEventListener('click', function () {
         removeGrid();
         promptAmount();
 
+
     })
+
+    // on #clear button press call function removeColor()
+    let clear = document.querySelector('#clear')
+    clear.addEventListener('click', removeColor);
 
 }
 onButtonPress();
+
+function onHover() {
+    let squares = document.querySelectorAll('.square');
+
+    squares.forEach((square) => {
+        square.addEventListener('mouseover', function () {
+            square.classList.add('color-change');
+        })
+    })
+
+}
+
+function removeColor() {
+    if (document.querySelector('.color-change') !== null) {
+        let colorChanges = document.querySelectorAll('.color-change');
+
+        colorChanges.forEach((colorChange) => {
+            colorChange.classList.remove('color-change');
+        })
+    } else {
+        return;
+    }
+}
 
 function removeGrid() {
     if (document.querySelector('.square') !== null) {
@@ -71,6 +99,8 @@ function appendSquare(response) {
         square.style.width = `${length}%`;
         square.style.paddingBottom = `${length}%`;
     })
+
+    onHover();
 
 
 }
