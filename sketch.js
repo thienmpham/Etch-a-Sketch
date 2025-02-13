@@ -6,16 +6,14 @@ function onButtonPress() {
     generate.addEventListener('click', function () {
         removeGrid();
         promptAmount();
-
-
     })
-
     // on #clear button press call function removeColor()
     let clear = document.querySelector('#clear')
     clear.addEventListener('click', removeColor);
 
 }
 onButtonPress();
+
 
 function onHover() {
     let squares = document.querySelectorAll('.square');
@@ -27,6 +25,7 @@ function onHover() {
     })
 
 }
+
 
 function removeColor() {
     if (document.querySelector('.color-change') !== null) {
