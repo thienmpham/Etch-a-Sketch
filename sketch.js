@@ -27,6 +27,17 @@ function onHover() {
 }
 
 
+function getRandomColor() {
+    let num1 = Math.floor(Math.random() * 256);
+    let num2 = Math.floor(Math.random() * 256);;
+    let num3 = Math.floor(Math.random() * 256);;
+
+    console.log(num1, num2, num3)
+
+}
+getRandomColor();
+
+
 function removeColor() {
     if (document.querySelector('.color-change') !== null) {
         let colorChanges = document.querySelectorAll('.color-change');
