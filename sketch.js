@@ -21,21 +21,29 @@ function onHover() {
     squares.forEach((square) => {
         square.addEventListener('mouseover', function () {
             square.classList.add('color-change');
+            getRandomColor();
+
         })
+
     })
 
 }
 
 
 function getRandomColor() {
+
+
     let num1 = Math.floor(Math.random() * 256);
-    let num2 = Math.floor(Math.random() * 256);;
-    let num3 = Math.floor(Math.random() * 256);;
+    let num2 = Math.floor(Math.random() * 256);
+    let num3 = Math.floor(Math.random() * 256);
+    let colorSquares = document.querySelectorAll('.square.color-change');
 
-    console.log(num1, num2, num3)
-
+    colorSquares.forEach((colorSquare) => {
+        colorSquare.style.backgroundColor = `rgb(${num1}, ${num2}, ${num3})`;
+        console.log('getting random color:', colorSquare)
+    })
 }
-getRandomColor();
+
 
 
 function removeColor() {
