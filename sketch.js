@@ -41,7 +41,9 @@ function removeColor() {
         let colorChanges = document.querySelectorAll('.color-change');
 
         colorChanges.forEach((colorChange) => {
+            colorChange.style.backgroundColor = 'rgb(247, 241, 241)';
             colorChange.classList.remove('color-change');
+
         })
     } else {
         return;
